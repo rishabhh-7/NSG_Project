@@ -331,7 +331,6 @@ try:
     data = hm.datasets.fetch_bushveld_gravity()
 
     # 5b. Grid the scattered data using Verde
-    # We'll use a bilinear interpolator to put the data onto a regular grid
     gridder = vd.Bilinear()
     gridder.fit((data.easting, data.northing), data.gravity_mgal)
     
